@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XDSKit'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of XDSKit.'
+  s.version          = '0.1.1'
+  s.summary          = '收集常用的框架，便于快捷开发'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,26 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+TODO: 收集常用的框架，便于快捷开发，后续请继续添加
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/XDSKit'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.homepage         = 'https://github.com/xudusheng/XDSKit'
+  s.license          = { :type => 'MIT'}
   s.author           = { 'xudusheng' => '597132100@qq.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/XDSKit.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/xudusheng/XDSKit.git', :tag => s.version.to_s }
+  
+  s.requires_arc = true
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '7.0'
 
   s.source_files = 'XDSKit/Classes/**/*'
   
-  # s.resource_bundles = {
+  # s.resource_bundles = {  
   #   'XDSKit' => ['XDSKit/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.public_header_files = 'XDSKit/Classes/**/*.h'
+  s.frameworks = 'UIKit'
+
   # s.dependency 'AFNetworking', '~> 2.3'
 end
