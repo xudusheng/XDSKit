@@ -1,0 +1,12 @@
+use_frameworks!
+
+target 'XDSKit_Example' do
+  pod 'XDSKit', :path => '../'
+
+  target 'XDSKit_Tests' do
+    inherit! :search_paths
+
+    pod 'Specta'
+  pod 'Expecta'
+  end
+end
