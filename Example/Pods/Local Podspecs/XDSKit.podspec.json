@@ -1,0 +1,22 @@
+{
+  "name": "XDSKit",
+  "version": "0.1.0",
+  "summary": "A short description of XDSKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/XDSKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "xudusheng": "597132100@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/XDSKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "XDSKit/Classes/**/*"
+}

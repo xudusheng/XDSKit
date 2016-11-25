@@ -1,0 +1,6 @@
+framework module Pods_XDSKit_Example {
+  umbrella header "Pods-XDSKit_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
