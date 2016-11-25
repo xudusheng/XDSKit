@@ -8,5 +8,8 @@ target 'XDSKit_Example' do
 
     pod 'Specta'
   pod 'Expecta'
+  
+  pod 'YYKit', '~> 1.0.9'
+  
   end
 end

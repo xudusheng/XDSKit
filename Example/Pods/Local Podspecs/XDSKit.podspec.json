@@ -1,22 +1,24 @@
 {
   "name": "XDSKit",
-  "version": "0.1.0",
-  "summary": "A short description of XDSKit.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/XDSKit",
+  "version": "0.1.1",
+  "summary": "收集常用的框架，便于快捷开发",
+  "description": "TODO: 收集常用的框架，便于快捷开发，后续请继续添加",
+  "homepage": "https://github.com/xudusheng/XDSKit",
   "license": {
-    "type": "MIT",
-    "file": "LICENSE"
+    "type": "MIT"
   },
   "authors": {
     "xudusheng": "597132100@qq.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/XDSKit.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/xudusheng/XDSKit.git",
+    "tag": "0.1.1"
   },
+  "requires_arc": true,
   "platforms": {
-    "ios": "8.0"
+    "ios": "7.0"
   },
-  "source_files": "XDSKit/Classes/**/*"
+  "source_files": "XDSKit/Classes/**/*",
+  "public_header_files": "XDSKit/Classes/**/*.h",
+  "frameworks": "UIKit"
 }

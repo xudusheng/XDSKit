@@ -1,12 +1,16 @@
 PODS:
   - Expecta (1.0.5)
   - Specta (1.0.5)
-  - XDSKit (0.1.0)
+  - XDSKit (0.1.1)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - Expecta
   - Specta
   - XDSKit (from `../`)
+  - YYKit (~> 1.0.9)
 
 EXTERNAL SOURCES:
   XDSKit:
@@ -15,8 +19,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
   Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
-  XDSKit: 45906e0b45c5d2c834a04b0ae3d4332d8d441b5b
+  XDSKit: e2d2503432b6e2a4ee1fc2ab3789f52556c3bb13
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: b0aaf791d52c29d8d39da45e913809c8926b11d7
+PODFILE CHECKSUM: 740d3ba7fc572ea2260ddd23a70c3bf008e0d1d2
 
 COCOAPODS: 1.1.1
