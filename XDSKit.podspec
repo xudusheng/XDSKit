@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XDSKit'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = '收集常用的框架，便于快捷开发'
 
 # This description is used to generate tags and improve search results.
