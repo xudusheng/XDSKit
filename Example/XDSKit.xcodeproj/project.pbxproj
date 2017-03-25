@@ -23,6 +23,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		699732812C1BADD297CD393C /* Pods_XDSKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDE61A854C463C8E87607F0 /* Pods_XDSKit_Example.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		A20E56721E85EA06008DCFA3 /* XDSKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A20E56711E85EA06008DCFA3 /* XDSKit.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		7EDE61A854C463C8E87607F0 /* Pods_XDSKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XDSKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9D765BB3EF36CF4F36B16FEA /* Pods-XDSKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDSKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-XDSKit_Example/Pods-XDSKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A20E56711E85EA06008DCFA3 /* XDSKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = XDSKit.podspec; path = ../XDSKit.podspec; sourceTree = "<group>"; };
 		C3CCD69B4B99716EDF5AA4A0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D06087106A0C82F0F41D0427 /* Pods-XDSKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDSKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XDSKit_Tests/Pods-XDSKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FAE7B006083F503228185A7A /* Pods_XDSKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XDSKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +98,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				A20E56711E85EA06008DCFA3 /* XDSKit.podspec */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for XDSKit */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				A20E56721E85EA06008DCFA3 /* XDSKit.podspec in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);

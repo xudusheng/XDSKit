@@ -1,14 +1,16 @@
 //
-//  UIViewController+HideNavigationBar.m
-//  XDSSwift
+//  UIViewController+XDSAddition.m
+//  XDSKit
 //
-//  Created by zhengda on 16/9/9.
-//  Copyright © 2016年 zhengda. All rights reserved.
+//  Created by Hmily on 2017/2/28.
+//  Copyright © 2017年 Hmily. All rights reserved.
 //
 
-#import "UIViewController+HideNavigationBar.h"
+#import "UIViewController+XDSAddition.h"
 #import <objc/runtime.h>
-@implementation UIViewController (HideNavigationBar)
+@implementation UIViewController (XDSAddition)
+
+#pragma mark - 是否隐藏UINavigationBar
 
 void hideNavigationBar_swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector) {
     Method originalMethod = class_getInstanceMethod(class, originalSelector);
@@ -19,7 +21,6 @@ void hideNavigationBar_swizzleMethod(Class class, SEL originalSelector, SEL swiz
     
     IMP originalImp = method_getImplementation(originalMethod);
     char *originalTypes = (char *)method_getTypeEncoding(originalMethod);
-    
     BOOL success = class_addMethod(class,
                                    originalSelector,
                                    swizzledImp,
@@ -35,6 +36,7 @@ void hideNavigationBar_swizzleMethod(Class class, SEL originalSelector, SEL swiz
     }
 }
 
+//ShareSDK中会有问题，短信分享的导航栏按钮无法响应
 + (void)load{
     hideNavigationBar_swizzleMethod(self,
                   @selector(viewWillAppear:),
@@ -44,7 +46,7 @@ void hideNavigationBar_swizzleMethod(Class class, SEL originalSelector, SEL swiz
 - (void)hideNavigationBar_ViewWillAppear:(BOOL)animated{
     [self hideNavigationBar_ViewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:self.hidesTopBarWhenPushed
-                                           animated:YES];
+                                             animated:YES];
 }
 
 
@@ -59,6 +61,28 @@ char * hidesTopBarWhenPushedKey = "hidesTopBarWhenPushed";
 - (BOOL)hidesTopBarWhenPushed{
     id hidesTopBarWhenPushed = objc_getAssociatedObject(self, hidesTopBarWhenPushedKey);
     return [hidesTopBarWhenPushed boolValue];
+}
+
+
+
+#pragma mark - 获取当前可见ViewController
++ (UIViewController *)xds_visiableViewController {
+    UIViewController *rootViewController = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
+    return [UIViewController xds_topViewControllerForViewController:rootViewController];
+}
+
++ (UIViewController *)xds_topViewControllerForViewController:(UIViewController *)viewController {
+    if ([viewController isKindOfClass:[UITabBarController class]]) {
+        return [self xds_topViewControllerForViewController:[(UITabBarController *)viewController selectedViewController]];
+    } else if ([viewController isKindOfClass:[UINavigationController class]]) {
+        return [(UINavigationController *)viewController visibleViewController];
+    } else {
+        if (viewController.presentedViewController) {
+            return [self xds_topViewControllerForViewController:viewController.presentedViewController];
+        } else {
+            return viewController;
+        }
+    }
 }
 
 @end
