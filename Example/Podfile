@@ -3,13 +3,13 @@ use_frameworks!
 target 'XDSKit_Example' do
   pod 'XDSKit', :path => '../'
 
-  target 'XDSKit_Tests' do
-    inherit! :search_paths
+#  target 'XDSKit_Tests' do
+#    inherit! :search_paths
 
-    pod 'Specta'
-  pod 'Expecta'
-  
-  pod 'YYKit', '~> 1.0.9'
-  
-  end
+#  pod 'Specta'
+#  pod 'Expecta'
+
+#  pod 'YYKit', '~> 1.0.9'
+
+#  end
 end
